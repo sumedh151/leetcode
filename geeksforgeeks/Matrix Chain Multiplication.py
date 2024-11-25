@@ -8,8 +8,8 @@ class Solution:
                 return 0
             if memo[i][j] !=-1:
                 return memo[i][j] 
+                
             min_cost = float('inf')
-
             for k in range(i,j):
 
                 if memo[i][k] != -1:
