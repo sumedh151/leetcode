@@ -3,7 +3,7 @@
 class Solution:
     def findClosestElements(self, arr: List[int], k: int, x: int) -> List[int]:
         # TC: O(nlogk)
-        # TC: O(k)
+        # SC: O(k)
         import heapq
         max_heap = []
         for i in range(len(arr)):
