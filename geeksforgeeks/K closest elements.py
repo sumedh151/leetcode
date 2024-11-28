@@ -5,7 +5,7 @@ class Solution:
     def printKClosest(self, arr, n, k, x):
         # code here
         # TC: O(nlogk)
-        # TC: O(k)
+        # SC: O(k)
         import heapq
         max_heap = []
         for i in range(len(arr)-1, -1, -1):
