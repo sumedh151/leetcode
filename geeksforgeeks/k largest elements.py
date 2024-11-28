@@ -7,7 +7,7 @@ class Solution:
         # arr.sort()
 		# arr.sort(reverse=True)
 		# return arr[:k]
-		
+
         # # approach 2: using max heap
         # # TC: O(n + klogn)
         # # SC: O(k)
@@ -17,7 +17,7 @@ class Solution:
 		# for i in range(k):
 		#     k_largest.append(heapq._heappop_max(arr))
 		# return k_largest
-        
+
         # approach 3: using min heap 
         # TC: O(nlogk + k)
         # SC: O(k)
