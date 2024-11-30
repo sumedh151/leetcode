@@ -5,7 +5,8 @@ class Solution:
         # left = 0
         # right = len(nums)-1
         # while(left <= right):
-        #     mid = (left+right)//2
+        #     # mid = (left+right)//2
+        #     mid = left+(right-left)//2
         #     print(left, right, mid, nums[mid], target)
         #     if target == nums[mid]:
         #         return mid
@@ -20,7 +21,8 @@ class Solution:
         def recurse(left,right):
             if left>right:
                 return -1
-            mid = (left+right)//2
+            # mid = (left+right)//2
+            mid = left+(right-left)//2
             if target == nums[mid]:
                 return mid
             elif target<nums[mid]:
