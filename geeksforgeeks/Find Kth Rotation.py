@@ -1,24 +1,25 @@
 # https://www.geeksforgeeks.org/problems/rotation4723/1
-def findKRotation(self, arr):
-    # code here
-    # tc: O(logn)
-    # sc: O(1)
-    n = len(arr)
-    left = 0
-    right = n-1
-    while(left <= right):
-        mid = left + (right-left)//2
-        prev = (mid+n-1)%n
-        next = (mid+1)%n
-        if arr[mid]<arr[prev] and arr[mid]<arr[next]:
-            return mid
-        elif arr[mid]<arr[0]:
-            right = mid - 1
-        elif arr[mid]>arr[n-1]:
-            left = mid + 1
-        else:
-            return 0
-
+#User function Template for python3
+class Solution:
+    def findKRotation(self, arr):
+        # code here
+        # tc: O(logn)
+        # sc: O(1)
+        n = len(arr)
+        left = 0
+        right = n-1
+        while(left <= right):
+            mid = left + (right-left)//2
+            prev = (mid+n-1)%n
+            next = (mid+1)%n
+            if arr[mid]<arr[prev] and arr[mid]<arr[next]:
+                return mid
+            elif arr[mid]<arr[0]:
+                right = mid - 1
+            elif arr[mid]>arr[n-1]:
+                left = mid + 1
+            else:
+                return 0
 
 # Examples:
 
