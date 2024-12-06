@@ -9,16 +9,12 @@ class Solution:
         while(left<=right):
             mid=left+(right-left)//2
             
-            # find prev and next elems
-            prev_elem = arr[mid - 1] if mid!=0 else float('-inf')
-            next_elem = arr[mid + 1] if mid!=n-1 else float('inf')
-            
             # finding actual mid
             if arr[mid] == target:
                 return mid
-            if prev_elem > arr[mid]:
+            if mid!=0 and arr[mid - 1] > arr[mid]:
                 actual_mid_ind = mid - 1
-            elif next_elem < arr[mid]:
+            elif mid!=n-1 and arr[mid + 1] < arr[mid]:
                 actual_mid_ind = mid + 1
             else:
                 actual_mid_ind = mid
