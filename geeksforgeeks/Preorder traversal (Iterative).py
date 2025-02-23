@@ -13,18 +13,19 @@ class Solution:
     # Return a list containing the preorder traversal of the given tree
     def preOrder(self, root):
         # code here
+        from collections import deque
         stack = deque()
         curr = root
-        traverse = []
+        iterative_traverse = []
         while(curr or stack):
             if curr:
-                traverse.append(curr.data)
+                iterative_traverse.append(curr.data)
                 stack.append(curr)
                 curr = curr.left
             else:
                 curr = stack.pop()
                 curr = curr.right
-        return traverse    
+        return iterative_traverse    
 
 
 # Given a Binary tree. Find the preorder traversal of the tree without using recursion.

@@ -16,16 +16,16 @@ class Solution:
 #Function to return a list containing the preorder traversal of the tree.
     def preorder(self,root):
     # code here
-        def traverse_preorder(node):
+        def recursive_preorder_traverse(node):
             if node is None:
                 return []
             res = []
             res.append(node.data)
-            res.extend(traverse_preorder(node.left))
-            res.extend(traverse_preorder(node.right))
+            res.extend(recursive_preorder_traverse(node.left))
+            res.extend(recursive_preorder_traverse(node.right))
             return res
         
-        return traverse_preorder(root)
+        return recursive_preorder_traverse(root)
 
 # Given a binary tree, find its preorder traversal.
 
