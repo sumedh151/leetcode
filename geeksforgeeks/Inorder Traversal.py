@@ -20,7 +20,6 @@ class Solution:
             res.append(node.data)
             res.extend(traverse_inorder(node.right))
             return res
-        
         return traverse_inorder(root)
 
 
