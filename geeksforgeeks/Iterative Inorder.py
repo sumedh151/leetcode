@@ -10,6 +10,7 @@ class Node:
         self.right = None
 '''
 
+# iterative
 # Return a list containing the inorder traversal of the given tree
 class Solution:
     def inOrder(self, root):
