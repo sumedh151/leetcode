@@ -27,6 +27,31 @@ class Solution:
         levelOrderCall(root, 0)
         return traverse
 
+# iterative
+class Solution:
+    def levelOrder(self, root):
+        # Your code here
+        from collections import deque
+        
+        q = deque()
+        q.append(root)
+        level = 0
+        traverse = []
+        while (q):
+            for _ in range(len(q)):
+                node = q.popleft()
+                if len(traverse)<level+1:
+                    traverse.append([])
+                    traverse[level].append(node.data)
+                else:
+                    traverse[level].append(node.data)
+                if node.left:
+                    q.append(node.left)
+                if node.right:
+                    q.append(node.right)
+            level+=1
+        return traverse
+                
 # Given a root of a binary tree with n nodes, the task is to find its level order traversal. Level order traversal of a tree is breadth-first traversal for the tree.
 
 # Examples:
