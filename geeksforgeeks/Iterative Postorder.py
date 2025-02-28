@@ -44,7 +44,6 @@ class Solution:
         curr = node
         traverse = []
         while (stack or curr):
-            # print(stack ,  curr)
             if curr:
                 stack.append(curr)
                 stack.append(curr)
